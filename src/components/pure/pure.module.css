@@ -1,3 +1,7 @@
 .input {
-    width: 23rem;
+    width: 25rem !important;
+}
+
+.button {
+    width: 25rem;
 }

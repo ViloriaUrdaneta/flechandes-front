@@ -33,7 +33,7 @@ function Form({onNewFlete}: FormProps) {
     }
 
     return (
-        <div>
+        <div className='container'>
             <form onSubmit={handleSubmit}>
                 <input onChange={handleChange} value={inputValues.origen} type='text' className={`form-control m-1 ${style.input}`} name='origen' placeholder='Origen de carga' />
                 <input onChange={handleChange} value={inputValues.destino} type='text' className={`form-control m-1 ${style.input}`}  name='destino' placeholder='Destino de carga' />
@@ -43,7 +43,7 @@ function Form({onNewFlete}: FormProps) {
                 <input onChange={handleChange} value={inputValues.fecha} type='text' className={`form-control m-1 ${style.input}`}  name='foto' placeholder='¿Cuándo lo necesitas?' />
                 <input onChange={handleChange} value={inputValues.ayudante} type='text' className={`form-control m-1 ${style.input}`}  name='ayudante' placeholder='¿Necesitas ayudante?' />
                 <input onChange={handleChange} value={inputValues.oferta} type='text' className={`form-control m-1 ${style.input}`}  name='oferta' placeholder='Oferta un precio' />
-                <button onClick={handleClear} type='submit' className="btn btn-info m-2">Flete!</button>
+                <button onClick={handleClear} type='submit' className={`btn btn-info m-2 ${style.button}`}>Flete!</button>
                 <button type='button'>Cancelar</button>
             </form>
         </div>
