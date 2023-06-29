@@ -1,5 +1,7 @@
 import useNewFleteForm from '../../hooks/useNewFleteForm';
-import { Flete } from '../../types'
+import { Flete } from '../../types';
+import style from "./pure.module.css";
+
 
 interface FormProps {
     onNewFlete: (newFlete: Flete) => void
@@ -33,14 +35,14 @@ function Form({onNewFlete}: FormProps) {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input onChange={handleChange} value={inputValues.origen} type='text' className="form-control m-2" name='origen' placeholder='Origen de carga' />
-                <input onChange={handleChange} value={inputValues.destino} type='text' className="form-control m-2" name='destino' placeholder='Destino de carga' />
-                <input onChange={handleChange} value={inputValues.carga} type='text' className="form-control m-2" name='carga' placeholder='¿Qué transporta?' />
-                <input onChange={handleChange} value={inputValues.foto} type='text' className="form-control m-2" name='foto' placeholder='Agregar imágenes del flete' />
-                <input onChange={handleChange} value={inputValues.vehiculo} type='text' className="form-control m-2" name='foto' placeholder='¿Qué vehiculo necesitas?' />
-                <input onChange={handleChange} value={inputValues.fecha} type='text' className="form-control m-2" name='foto' placeholder='¿Cuándo lo necesitas?' />
-                <input onChange={handleChange} value={inputValues.ayudante} type='text' className="form-control m-2" name='ayudante' placeholder='¿Necesitas ayudante?' />
-                <input onChange={handleChange} value={inputValues.oferta} type='text' className="form-control m-2" name='oferta' placeholder='Oferta un precio' />
+                <input onChange={handleChange} value={inputValues.origen} type='text' className={`form-control m-1 ${style.input}`} name='origen' placeholder='Origen de carga' />
+                <input onChange={handleChange} value={inputValues.destino} type='text' className={`form-control m-1 ${style.input}`}  name='destino' placeholder='Destino de carga' />
+                <input onChange={handleChange} value={inputValues.carga} type='text' className={`form-control m-1 ${style.input}`}  name='carga' placeholder='¿Qué transporta?' />
+                <input onChange={handleChange} value={inputValues.foto} type='text' className={`form-control m-1 ${style.input}`}  name='foto' placeholder='Agregar imágenes del flete' />
+                <input onChange={handleChange} value={inputValues.vehiculo} type='text' className={`form-control m-1 ${style.input}`}  name='foto' placeholder='¿Qué vehiculo necesitas?' />
+                <input onChange={handleChange} value={inputValues.fecha} type='text' className={`form-control m-1 ${style.input}`}  name='foto' placeholder='¿Cuándo lo necesitas?' />
+                <input onChange={handleChange} value={inputValues.ayudante} type='text' className={`form-control m-1 ${style.input}`}  name='ayudante' placeholder='¿Necesitas ayudante?' />
+                <input onChange={handleChange} value={inputValues.oferta} type='text' className={`form-control m-1 ${style.input}`}  name='oferta' placeholder='Oferta un precio' />
                 <button onClick={handleClear} type='submit' className="btn btn-info m-2">Flete!</button>
                 <button type='button'>Cancelar</button>
             </form>
